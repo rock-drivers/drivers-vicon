@@ -63,7 +63,7 @@ bool Driver::getFrame( const base::Time& timeout )
 {
     base::Time start = base::Time::now();
     Result::Enum result;
-    while( ((result=impl->client.GetFrame().Result) == Result::NoFrame) && (start+timeout < base::Time::now()) )
+    while( ((result=impl->client.GetFrame().Result) == Result::NoFrame) && (start+timeout > base::Time::now()) )
     {
 	const unsigned long wait_ms = 10;
 #ifdef WIN32
@@ -72,7 +72,7 @@ bool Driver::getFrame( const base::Time& timeout )
 	usleep( wait_ms );
 #endif
     }
-
+    
     if( result == Result::Success )
     {
 	return true;
