@@ -33,8 +33,8 @@ bool Driver::connect( const std::string& hostname, const unsigned int port )
 	impl->client.EnableSegmentData();
 	impl->client.EnableUnlabeledMarkerData();
 
-	impl->client.SetStreamMode( ViconDataStreamSDK::CPP::StreamMode::ClientPull );
-	// MyClient.SetStreamMode( ViconDataStreamSDK::CPP::StreamMode::ClientPullPreFetch );
+	//impl->client.SetStreamMode( ViconDataStreamSDK::CPP::StreamMode::ClientPull );
+	impl->client.SetStreamMode( ViconDataStreamSDK::CPP::StreamMode::ClientPullPreFetch );
 	// MyClient.SetStreamMode( ViconDataStreamSDK::CPP::StreamMode::ServerPush );
 
 	// Set the global up axis
