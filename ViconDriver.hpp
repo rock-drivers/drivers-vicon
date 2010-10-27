@@ -52,7 +52,7 @@ namespace vicon
 	 * @param timeout time in milliseconds to wait for a new frame
 	 * @result true if a frame has been received
 	 */
-	bool getFrame( const base::Time& timeout = base::Time(1.0) );
+	bool getFrame( const base::Time& timeout = base::Time::fromSeconds(1.0) );
 
 	/** 
 	 * @result the timestamp of the current frame
