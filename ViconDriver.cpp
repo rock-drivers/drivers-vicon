@@ -98,7 +98,10 @@ Eigen::Transform3d Driver::getSegmentTransform( const std::string& subjectName, 
     Output_GetSegmentGlobalRotationQuaternion quat = 
 	impl->client.GetSegmentGlobalRotationQuaternion( subjectName, segmentName );
 
-    Eigen::Transform3d result = Eigen::Translation3d( trans.Translation[0], trans.Translation[1], trans.Translation[2] ) * 
+    Eigen::Vector3d trans_m( trans.Translation[0], trans.Translation[1], trans.Translation[2] );
+
+    // vicon data is in mm, but we prefer standard si units...
+    Eigen::Transform3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
 	Eigen::Quaterniond( quat.Rotation[0], quat.Rotation[1], quat.Rotation[2], quat.Rotation[3] );
 
     return result;
@@ -114,11 +117,12 @@ std::vector<Eigen::Vector3d> Driver::getUnlabeledMarkers()
 	Output_GetUnlabeledMarkerGlobalTranslation _Output_GetUnlabeledMarkerGlobalTranslation =
 	    impl->client.GetUnlabeledMarkerGlobalTranslation( UnlabeledMarkerIndex );
 
-	result.push_back( 
-		Eigen::Vector3d(
-		    _Output_GetUnlabeledMarkerGlobalTranslation.Translation[ 0 ],
+        Eigen::Vector3d marker_pos( 
+                    _Output_GetUnlabeledMarkerGlobalTranslation.Translation[ 0 ],
 		    _Output_GetUnlabeledMarkerGlobalTranslation.Translation[ 1 ],
-		    _Output_GetUnlabeledMarkerGlobalTranslation.Translation[ 2 ] ) );
+		    _Output_GetUnlabeledMarkerGlobalTranslation.Translation[ 2 ] );
+
+	result.push_back( marker_pos * 1e-3 ); 
     }
 
     return result;
