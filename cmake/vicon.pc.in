@@ -6,5 +6,6 @@ includedir=${prefix}/include
 Name: @PROJECT_NAME@
 Description: @PROJECT_DESCRIPTION@
 Version: @PROJECT_VERSION@
+Requires: base-types
 Libs: -L${libdir} -lViconDataStreamSDK -lvicon
 Cflags: -I${includedir}

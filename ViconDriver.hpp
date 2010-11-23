@@ -2,6 +2,7 @@
 #define __VICON_DRIVER_HPP__
 
 #include <base/time.h>
+#include <base/eigen.h>
 #include <boost/shared_ptr.hpp>
 #include <Eigen/Core>
 #include <Eigen/Geometry>
@@ -75,7 +76,7 @@ namespace vicon
 	 *
 	 * @result a vector of unlabeled markers
 	 */
-	std::vector<Eigen::Vector3d> getUnlabeledMarkers();
+	std::vector<base::Vector3d> getUnlabeledMarkers();
 
     private:
 	boost::shared_ptr<DriverImpl> impl;

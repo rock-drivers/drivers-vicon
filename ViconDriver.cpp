@@ -107,9 +107,9 @@ Eigen::Transform3d Driver::getSegmentTransform( const std::string& subjectName, 
     return result;
 }
 
-std::vector<Eigen::Vector3d> Driver::getUnlabeledMarkers()
+std::vector<base::Vector3d> Driver::getUnlabeledMarkers()
 {
-    std::vector<Eigen::Vector3d> result;
+    std::vector<base::Vector3d> result;
 
     unsigned int UnlabeledMarkerCount = impl->client.GetUnlabeledMarkerCount().MarkerCount;
     for( unsigned int UnlabeledMarkerIndex = 0 ; UnlabeledMarkerIndex < UnlabeledMarkerCount ; ++UnlabeledMarkerIndex )
