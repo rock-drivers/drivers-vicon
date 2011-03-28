@@ -13,4 +13,5 @@
   <license>LGPL v2 or later</license>
 
   <rosdep name="eigen2" />
+  <depend package="base/types" />
 </package>
