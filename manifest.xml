@@ -12,6 +12,6 @@
   </copyright>
   <license>LGPL v2 or later</license>
 
-  <rosdep name="eigen2" />
+  <rosdep name="eigen3" />
   <depend package="base/types" />
 </package>

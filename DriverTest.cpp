@@ -1,4 +1,5 @@
 #include "ViconDriver.hpp"
+#include <iostream>
 
 using namespace std;
 

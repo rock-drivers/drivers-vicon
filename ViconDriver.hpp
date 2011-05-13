@@ -68,7 +68,7 @@ namespace vicon
 	 * @param segmentName name of the segment in the subject
 	 * @result transformation from the segments local to the global reference frame
 	 */
-	Eigen::Transform3d getSegmentTransform( const std::string& subjectName, const std::string& segmentName );
+	Eigen::Affine3d getSegmentTransform( const std::string& subjectName, const std::string& segmentName );
 
 	/** 
 	 * Returns a list of unlabeled markers found by the system in global

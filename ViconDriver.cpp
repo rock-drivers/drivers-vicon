@@ -90,7 +90,7 @@ base::Time Driver::getTimestamp()
     return base::Time::now();
 }
 
-Eigen::Transform3d Driver::getSegmentTransform( const std::string& subjectName, const std::string& segmentName )
+Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, const std::string& segmentName )
 {
     Output_GetSegmentGlobalTranslation trans = 
 	impl->client.GetSegmentGlobalTranslation( subjectName, segmentName );
@@ -101,7 +101,7 @@ Eigen::Transform3d Driver::getSegmentTransform( const std::string& subjectName, 
     Eigen::Vector3d trans_m( trans.Translation[0], trans.Translation[1], trans.Translation[2] );
 
     // vicon data is in mm, but we prefer standard si units...
-    Eigen::Transform3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
+    Eigen::Affine3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
 	Eigen::Quaterniond( quat.Rotation[0], quat.Rotation[1], quat.Rotation[2], quat.Rotation[3] );
 
     return result;

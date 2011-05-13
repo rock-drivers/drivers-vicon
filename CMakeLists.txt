@@ -5,11 +5,6 @@ cmake_minimum_required(VERSION 2.8)
 include(cmake/CommonSetup.cmake)
 include(FindPkgConfig)
 
-#include_directories(${PROJECT_SOURCE_DIR})
-
-find_package(Eigen2 REQUIRED)
-include_directories(${EIGEN2_INCLUDE_DIR})
-
 pkg_check_modules(DFKI REQUIRED "base-types")
 include_directories(${DFKI_INCLUDE_DIRS})
 link_directories(${DFKI_LIBRARY_DIRS})
