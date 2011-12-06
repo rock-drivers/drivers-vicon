@@ -10,6 +10,7 @@
 
 namespace vicon
 {
+
     class DriverImpl;
 
     /**
@@ -77,6 +78,14 @@ namespace vicon
 	 * @result a vector of unlabeled markers
 	 */
 	std::vector<base::Vector3d> getUnlabeledMarkers();
+
+    /** @brief Get axes direction.*/
+    void getAxesDir ( int& x_dir, int& y_dir, int& z_dir );
+
+    /** @brief Set axes directions.
+     *
+     * Mapping is as follows: Forward=1, Backward=-1, Left=2, Right=-2, Up=3, Down=-3 */
+    void setAxesDir ( int x_dir, int y_dir, int z_dir );
 
     private:
 	boost::shared_ptr<DriverImpl> impl;

@@ -15,6 +15,34 @@ namespace vicon {
     };
 }
 
+int axesMap ( Direction::Enum axis ) {
+    switch ( axis ) {
+        case Direction::Up: return 3;
+        case Direction::Down: return -3;
+        case Direction::Left: return 2;
+        case Direction::Right: return -2;
+        case Direction::Forward: return 1;
+        case Direction::Backward: return -1;
+        default: return 0;
+    }
+}
+
+Direction::Enum axesMap ( int axis ) {
+    int axis_val = axis < 0 ? -axis : axis;
+    switch ( axis_val ) {
+        case 1:
+            if ( axis/axis_val > 0 ) return  Direction::Forward;
+            else return Direction::Backward; 
+        case 2:
+            if ( axis/axis_val > 0 ) return  Direction::Left;
+            else return Direction::Right; 
+        case 3:
+            if ( axis/axis_val > 0 ) return  Direction::Up;
+            else return Direction::Down;
+        default:
+            return Direction::Forward;
+    }
+}
 
 Driver::Driver()
     : impl( new DriverImpl() )
@@ -128,3 +156,17 @@ std::vector<base::Vector3d> Driver::getUnlabeledMarkers()
     return result;
 }
 
+
+void Driver::getAxesDir( int& x_dir, int& y_dir, int& z_dir )
+{
+    Output_GetAxisMapping vicon_axes = impl->client.GetAxisMapping ();
+    x_dir = axesMap( vicon_axes.XAxis );
+    y_dir = axesMap( vicon_axes.YAxis );
+    z_dir = axesMap( vicon_axes.ZAxis );
+}
+
+void Driver::setAxesDir( int x_dir, int y_dir, int z_dir )
+{
+    impl->client.SetAxisMapping( axesMap(x_dir), axesMap(y_dir), axesMap(z_dir) );
+
+}
