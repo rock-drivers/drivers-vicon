@@ -67,9 +67,16 @@ namespace vicon
 	 *
 	 * @param subjectName name of the subject
 	 * @param segmentName name of the segment in the subject
+	 * @param inFrame is true if segment is present in the current frame (not occluded).
 	 * @result transformation from the segments local to the global reference frame
 	 */
-	Eigen::Affine3d getSegmentTransform( const std::string& subjectName, const std::string& segmentName );
+	Eigen::Affine3d getSegmentTransform( const std::string& subjectName, const std::string& segmentName, bool& inFrame);
+
+    /** For backcompatibility. */	
+    Eigen::Affine3d getSegmentTransform( const std::string& subjectName, const std::string& segmentName) { 
+        bool lin_frame; 
+        return getSegmentTransform ( subjectName, segmentName, lin_frame );
+    }
 
 	/** 
 	 * Returns a list of unlabeled markers found by the system in global

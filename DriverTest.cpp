@@ -23,8 +23,10 @@ int main( int argc, char* argv[] )
 
     while(driver.getFrame())
     {
+        bool is_there;
 	std::cout << "got frame at " << driver.getTimestamp() << std::endl;
 	std::cout << "transform: " << std::endl 
-	    << driver.getSegmentTransform(subject, segment).matrix() << std::endl;
+	    << driver.getSegmentTransform(subject, segment, is_there).matrix() << std::endl;
+        if ( !is_there ) std::cout << "object is occluded!" << std::endl;
     }
 }

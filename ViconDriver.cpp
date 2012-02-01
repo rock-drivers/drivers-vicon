@@ -118,7 +118,7 @@ base::Time Driver::getTimestamp()
     return base::Time::now();
 }
 
-Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, const std::string& segmentName )
+Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, const std::string& segmentName, bool& inFrame)
 {
     Output_GetSegmentGlobalTranslation trans = 
 	impl->client.GetSegmentGlobalTranslation( subjectName, segmentName );
@@ -131,6 +131,8 @@ Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, con
     // vicon data is in mm, but we prefer standard si units...
     Eigen::Affine3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
 	Eigen::Quaterniond( quat.Rotation[0], quat.Rotation[1], quat.Rotation[2], quat.Rotation[3] );
+
+    inFrame = trans.Occluded; // Althoug the variable is called Occluded it is true if the segment is there.
 
     return result;
 }
