@@ -15,12 +15,11 @@ link_directories(${PROJECT_BINARY_DIR}/lib)
 add_executable(ViconDump ViconDump.cpp)
 target_link_libraries(ViconDump ViconDataStreamSDK)
 
-add_library(vicon ViconDriver.cpp)
+add_library(vicon SHARED ViconDriver.cpp)
 target_link_libraries(vicon ViconDataStreamSDK)
 install(TARGETS vicon
     LIBRARY DESTINATION lib 
     ARCHIVE DESTINATION lib )
-set_target_properties(vicon PROPERTIES COMPILE_FLAGS -fPIC)
 install(FILES ViconDriver.hpp DESTINATION include)
 
 add_executable(DriverTest DriverTest.cpp)
