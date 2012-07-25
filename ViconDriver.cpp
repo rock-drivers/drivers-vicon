@@ -3,6 +3,7 @@
 
 #include <sstream>
 #include <time.h>
+#include <base/logging.h>
 
 using namespace vicon;
 using namespace ViconDataStreamSDK::CPP;
@@ -53,6 +54,7 @@ bool Driver::connect( const std::string& hostname, const unsigned int port )
 {
     std::ostringstream host;
     host << hostname << ":" << port;
+    LOG_INFO_S << "connecting to " << host;
 
     impl->client.Connect( host.str() );
 
@@ -84,6 +86,7 @@ bool Driver::isConnected()
 
 void Driver::disconnect()
 {
+    LOG_INFO_S << "disconnecting";
     impl->client.Disconnect();
 }
 
@@ -103,11 +106,12 @@ bool Driver::getFrame( const base::Time& timeout )
     
     if( result == Result::Success )
     {
+        LOG_DEBUG_S << "Got Frame!";
 	return true;
     }
     else
     {
-	// TODO dump error message
+        if ( timeout.toSeconds() > 0 ) LOG_ERROR_S << "No Frame received!";
 	return false;
     }
 }
@@ -120,6 +124,8 @@ base::Time Driver::getTimestamp()
 
 Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, const std::string& segmentName, bool& inFrame)
 {
+    
+    LOG_INFO_S << "get transform: " << subjectName << "." << segmentName;
     Output_GetSegmentGlobalTranslation trans = 
 	impl->client.GetSegmentGlobalTranslation( subjectName, segmentName );
 
