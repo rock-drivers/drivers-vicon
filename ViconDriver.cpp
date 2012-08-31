@@ -2,6 +2,7 @@
 #include "Client.h"
 
 #include <sstream>
+#include <iostream>
 #include <time.h>
 #include <base/logging.h>
 
@@ -107,6 +108,7 @@ bool Driver::getFrame( const base::Time& timeout )
     if( result == Result::Success )
     {
         LOG_DEBUG_S << "Got Frame!";
+// 	std::cout<<"Got Frame!\n";
 	return true;
     }
     else
@@ -125,6 +127,11 @@ base::Time Driver::getTimestamp()
 Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, const std::string& segmentName, bool& inFrame)
 {
     
+     // Get the segment name
+    std::string SegmentName = impl->client.GetSubjectRootSegmentName(subjectName).SegmentName;
+    
+        std::cout << "          Name: " << SegmentName << std::endl;
+	
     LOG_INFO_S << "get transform: " << subjectName << "." << segmentName;
     Output_GetSegmentGlobalTranslation trans = 
 	impl->client.GetSegmentGlobalTranslation( subjectName, segmentName );
@@ -134,11 +141,12 @@ Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, con
 
     Eigen::Vector3d trans_m( trans.Translation[0], trans.Translation[1], trans.Translation[2] );
 
+    std::cout<<"Translation: "<<trans.Translation[0]<< trans.Translation[1]<< trans.Translation[2]<<"\n";
     // vicon data is in mm, but we prefer standard si units...
     Eigen::Affine3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
 	Eigen::Quaterniond( quat.Rotation[0], quat.Rotation[1], quat.Rotation[2], quat.Rotation[3] );
 
-    inFrame = trans.Occluded; // Althoug the variable is called Occluded it is true if the segment is there.
+    inFrame = trans.Occluded; // It is true if the subject is Occluded, i.e.: Some markers can not be tracked by vicon.
 
     return result;
 }
