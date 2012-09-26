@@ -2,7 +2,6 @@
 #include "Client.h"
 
 #include <sstream>
-#include <iostream>
 #include <time.h>
 #include <base/logging.h>
 
@@ -33,13 +32,13 @@ Direction::Enum axesMap ( int axis ) {
     int axis_val = axis < 0 ? -axis : axis;
     switch ( axis_val ) {
         case 1:
-            if ( axis/axis_val > 0 ) return  Direction::Forward;
+            if ( axis > 0 ) return  Direction::Forward;
             else return Direction::Backward; 
         case 2:
-            if ( axis/axis_val > 0 ) return  Direction::Left;
+            if ( axis > 0 ) return  Direction::Left;
             else return Direction::Right; 
         case 3:
-            if ( axis/axis_val > 0 ) return  Direction::Up;
+            if ( axis > 0 ) return  Direction::Up;
             else return Direction::Down;
         default:
             return Direction::Forward;
@@ -108,13 +107,12 @@ bool Driver::getFrame( const base::Time& timeout )
     if( result == Result::Success )
     {
         LOG_DEBUG_S << "Got Frame!";
-// 	std::cout<<"Got Frame!\n";
-	return true;
+	    return true;
     }
     else
     {
         if ( timeout.toSeconds() > 0 ) LOG_ERROR_S << "No Frame received!";
-	return false;
+	    return false;
     }
 }
 
@@ -130,9 +128,9 @@ Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, con
      // Get the segment name
     std::string SegmentName = impl->client.GetSubjectRootSegmentName(subjectName).SegmentName;
     
-        std::cout << "          Name: " << SegmentName << std::endl;
+    LOG_DEBUG_S << "          Name: " << SegmentName;
 	
-    LOG_INFO_S << "get transform: " << subjectName << "." << segmentName;
+    LOG_DEBUG_S << "get transform: " << subjectName << "." << segmentName;
     Output_GetSegmentGlobalTranslation trans = 
 	impl->client.GetSegmentGlobalTranslation( subjectName, segmentName );
 
@@ -141,7 +139,6 @@ Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, con
 
     Eigen::Vector3d trans_m( trans.Translation[0], trans.Translation[1], trans.Translation[2] );
 
-    std::cout<<"Translation: "<<trans.Translation[0]<< trans.Translation[1]<< trans.Translation[2]<<"\n";
     // vicon data is in mm, but we prefer standard si units...
     Eigen::Affine3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
 	Eigen::Quaterniond( quat.Rotation[0], quat.Rotation[1], quat.Rotation[2], quat.Rotation[3] );
