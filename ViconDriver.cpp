@@ -146,7 +146,7 @@ Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, con
     Eigen::Affine3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
 	Eigen::Quaterniond( quat.Rotation[0], quat.Rotation[1], quat.Rotation[2], quat.Rotation[3] );
 
-    inFrame = trans.Occluded; // It is true if the subject is Occluded, i.e.: Some markers can not be tracked by vicon.
+    inFrame = !trans.Occluded; 
 
     return result;
 }
