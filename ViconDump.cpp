@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include "Client.h"
 #include <iostream>
+#include <unistd.h>
 
 #ifdef WIN32
   #include <conio.h>   // For _kbhit()
