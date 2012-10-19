@@ -141,7 +141,7 @@ Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, con
 
     // vicon data is in mm, but we prefer standard si units...
     Eigen::Affine3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
-	Eigen::Quaterniond( quat.Rotation[0], quat.Rotation[1], quat.Rotation[2], quat.Rotation[3] );
+	Eigen::Quaterniond( quat.Rotation[3], quat.Rotation[0], quat.Rotation[1], quat.Rotation[2] );
 
     inFrame = !trans.Occluded; 
 
