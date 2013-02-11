@@ -26,6 +26,8 @@ namespace vicon
     class Driver
     {
     public:
+        enum GetResult { UNKNOWN, SUCCESS, INVALID_SUBJECT_NAME, INVALID_SEGMENT_NAME};
+
 	Driver();
 
 	/** 
@@ -78,6 +80,9 @@ namespace vicon
         return getSegmentTransform ( subjectName, segmentName, lin_frame );
     }
 
+        /** Get the result o the last getSegmentTransform operation. */
+        GetResult getLastResult() { return mLastResult; }
+
 	/** 
 	 * Returns a list of unlabeled markers found by the system in global
 	 * coordinates.
@@ -96,6 +101,7 @@ namespace vicon
 
     private:
 	boost::shared_ptr<DriverImpl> impl;
+        GetResult mLastResult;
     };
 }
 

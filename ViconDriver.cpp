@@ -46,7 +46,7 @@ Direction::Enum axesMap ( int axis ) {
 }
 
 Driver::Driver()
-    : impl( new DriverImpl() )
+    : impl( new DriverImpl() ), mLastResult(UNKNOWN)
 {
 }
 
@@ -143,7 +143,22 @@ Eigen::Affine3d Driver::getSegmentTransform( const std::string& subjectName, con
     Eigen::Affine3d result = Eigen::Translation3d( trans_m * 1e-3 ) * 
 	Eigen::Quaterniond( quat.Rotation[3], quat.Rotation[0], quat.Rotation[1], quat.Rotation[2] );
 
-    inFrame = !trans.Occluded; 
+    inFrame = !trans.Occluded;
+
+    switch(trans.Result) {
+        case(Result::InvalidSubjectName):
+            mLastResult = INVALID_SUBJECT_NAME;
+            break;
+        case(Result::InvalidSegmentName):
+            mLastResult = INVALID_SEGMENT_NAME;
+            break;
+        case(Result::Success):
+            mLastResult = SUCCESS;
+            break;
+        default:
+            mLastResult = UNKNOWN;
+            break;
+    }
 
     return result;
 }
