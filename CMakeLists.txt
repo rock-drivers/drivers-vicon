@@ -28,6 +28,7 @@ install(TARGETS vicon
     LIBRARY DESTINATION lib 
     ARCHIVE DESTINATION lib )
 install(FILES ViconDriver.hpp DESTINATION include)
+install(FILES ViconUncertainty.hpp DESTINATION include)
 
 add_executable(DriverTest DriverTest.cpp)
 target_link_libraries(DriverTest vicon ViconDataStreamSDK)
