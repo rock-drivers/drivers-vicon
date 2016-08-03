@@ -1,11 +1,17 @@
 #ifndef __VICON_DRIVER_HPP__
 #define __VICON_DRIVER_HPP__
 
-#include <base/time.h>
-#include <base/eigen.h>
+/** base types **/
+#include <base/Time.hpp>
+#include <base/Eigen.hpp>
+
+/** Boost **/
 #include <boost/shared_ptr.hpp>
+
+/** Eigen library **/
 #include <Eigen/Core>
 #include <Eigen/Geometry>
+
 #include <vector>
 
 namespace vicon

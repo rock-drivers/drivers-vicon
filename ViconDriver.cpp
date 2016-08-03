@@ -3,7 +3,7 @@
 
 #include <sstream>
 #include <time.h>
-#include <base/logging.h>
+#include <base-logging/Logging.hpp>
 
 using namespace vicon;
 using namespace ViconDataStreamSDK::CPP;
