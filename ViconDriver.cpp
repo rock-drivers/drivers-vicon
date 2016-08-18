@@ -54,7 +54,7 @@ bool Driver::connect( const std::string& hostname, const unsigned int port )
 {
     std::ostringstream host;
     host << hostname << ":" << port;
-    LOG_INFO_S << "connecting to " << host;
+    LOG_INFO_S << "connecting to " << host.str();
 
     impl->client.Connect( host.str() );
 
