@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/lib
+includedir=${prefix}/include/ViconDataStreamSDK_CPP
+
+Name: DataStreamSDK
+Description: SDK for the Vicon Tracking System.
+Version: @PROJECT_VERSION@
+Requires:
+Libs: -L${libdir} -lViconDataStreamSDK_CPP -lboost_thread -lboost_date_time
+Cflags: -I${includedir}

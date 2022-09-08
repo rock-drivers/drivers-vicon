@@ -1,0 +1,7 @@
+add_executable(ViconDataStreamSDK_CPPTest
+	ViconDataStreamSDK_CPPTest.cpp
+)
+
+target_link_libraries(ViconDataStreamSDK_CPPTest
+	ViconDataStreamSDK_CPP
+)
