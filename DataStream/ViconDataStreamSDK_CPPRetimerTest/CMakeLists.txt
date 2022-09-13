@@ -1,0 +1,8 @@
+add_executable(ViconDataStreamSDK_CPPRetimerTest
+	ViconDataStreamSDK_CPPRetimerTest.cpp
+)
+
+target_link_libraries(ViconDataStreamSDK_CPPRetimerTest
+	ViconDataStreamSDK_CPP
+	ViconCGStreamClientSDK
+)

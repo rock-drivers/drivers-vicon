@@ -1,0 +1,7 @@
+add_subdirectory(ViconCGStreamClient)
+add_subdirectory(ViconCGStreamClientSDK)
+add_subdirectory(ViconDataStreamSDK_CPP)
+add_subdirectory(ViconDataStreamSDK_CPPRetimerTest)
+add_subdirectory(ViconDataStreamSDK_CPPTest)
+add_subdirectory(ViconDataStreamSDKCore)
+add_subdirectory(ViconDataStreamSDKCoreUtils)

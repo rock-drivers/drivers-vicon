@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="DataStreamSDK" Version="10.0.0" InternalType="Library">
+  <VirtualDirectory Name="Project">
+    <File Name="README.md"/>
+    <File Name="manifest"/>
+    <File Name="CMakeLists.txt"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="DataStream">
+    <File Name="DataStream/CMakeLists.txt"/>
+    <VirtualDirectory Name="ViconCGStream">
+      <File Name="DataStream/ViconCGStream/StreamInfo.h"/>
+      <File Name="DataStream/ViconCGStream/LocalSegmentsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/LabeledRecons.h"/>
+      <File Name="DataStream/ViconCGStream/StopMulticastSender.h"/>
+      <File Name="DataStream/ViconCGStream/LabeledReconRayAssignments.h"/>
+      <File Name="DataStream/ViconCGStream/ApplicationInfo.h"/>
+      <File Name="DataStream/ViconCGStream/SubjectHealth.h"/>
+      <File Name="DataStream/ViconCGStream/GreyscaleBlobsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/ForcePlateInfo.h"/>
+      <File Name="DataStream/ViconCGStream/LabeledReconsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/EdgePairsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/Timecode.h"/>
+      <File Name="DataStream/ViconCGStream/EyeTrackerInfo.h"/>
+      <File Name="DataStream/ViconCGStream/GreyscaleBlobs.h"/>
+      <File Name="DataStream/ViconCGStream/EyeTrackerFrame.h"/>
+      <File Name="DataStream/ViconCGStream/GlobalSegments.h"/>
+      <File Name="DataStream/ViconCGStream/ReconRayAssignmentsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/CameraCalibrationHealth.h"/>
+      <File Name="DataStream/ViconCGStream/FrameRateInfo.h"/>
+      <File Name="DataStream/ViconCGStream/ForceFrame.h"/>
+      <File Name="DataStream/ViconCGStream/CentroidTracksDetail.h"/>
+      <File Name="DataStream/ViconCGStream/CameraTimingInfo.h"/>
+      <File Name="DataStream/ViconCGStream/SubjectInfo.h"/>
+      <File Name="DataStream/ViconCGStream/CentroidTracks.h"/>
+      <File Name="DataStream/ViconCGStream/LatencyInfoDetail.h"/>
+      <File Name="DataStream/ViconCGStream/Dummy.cpp"/>
+      <File Name="DataStream/ViconCGStream/ChannelInfo.h"/>
+      <File Name="DataStream/ViconCGStream/Item.h"/>
+      <File Name="DataStream/ViconCGStream/LightweightSegments.h"/>
+      <File Name="DataStream/ViconCGStream/CameraWand3d.h"/>
+      <File Name="DataStream/ViconCGStream/CameraWand3dDetail.h"/>
+      <File Name="DataStream/ViconCGStream/GreyscaleSubsampledBlobs.h"/>
+      <File Name="DataStream/ViconCGStream/SubjectTopologyDetail.h"/>
+      <File Name="DataStream/ViconCGStream/EdgePairs.h"/>
+      <File Name="DataStream/ViconCGStream/VideoFrame.h"/>
+      <File Name="DataStream/ViconCGStream/ScopedReader.h"/>
+      <File Name="DataStream/ViconCGStream/StartMulticastSender.h"/>
+      <File Name="DataStream/ViconCGStream/SubjectScale.h"/>
+      <File Name="DataStream/ViconCGStream/FrameInfo.h"/>
+      <File Name="DataStream/ViconCGStream/CameraCalibrationHealthDetail.h"/>
+      <File Name="DataStream/ViconCGStream/Contents.h"/>
+      <File Name="DataStream/ViconCGStream/VoltageFrame.h"/>
+      <File Name="DataStream/ViconCGStream/CameraSensorInfo.h"/>
+      <File Name="DataStream/ViconCGStream/RequestNextFrame.h"/>
+      <File Name="DataStream/ViconCGStream/LatencyInfo.h"/>
+      <File Name="DataStream/ViconCGStream/SubjectInfoDetail.h"/>
+      <File Name="DataStream/ViconCGStream/CameraInfo.h"/>
+      <File Name="DataStream/ViconCGStream/ObjectQuality.h"/>
+      <File Name="DataStream/ViconCGStream/IsEqual.h"/>
+      <File Name="DataStream/ViconCGStream/LocalSegments.h"/>
+      <File Name="DataStream/ViconCGStream/CameraWand2d.h"/>
+      <File Name="DataStream/ViconCGStream/LightweightSegmentsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/ApexHaptics.h"/>
+      <File Name="DataStream/ViconCGStream/Ping.h"/>
+      <File Name="DataStream/ViconCGStream/RequestFrame.h"/>
+      <File Name="DataStream/ViconCGStream/HardwareFrameInfo.h"/>
+      <File Name="DataStream/ViconCGStream/CentroidWeights.h"/>
+      <File Name="DataStream/ViconCGStream/UnlabeledReconRayAssignments.h"/>
+      <File Name="DataStream/ViconCGStream/CentroidsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/SubjectScaleDetail.h"/>
+      <File Name="DataStream/ViconCGStream/Centroids.h"/>
+      <File Name="DataStream/ViconCGStream/UnlabeledReconsDetail.h"/>
+      <File Name="DataStream/ViconCGStream/DeviceInfo.h"/>
+      <File Name="DataStream/ViconCGStream/Filter.h"/>
+      <File Name="DataStream/ViconCGStream/ObjectEnums.h"/>
+      <File Name="DataStream/ViconCGStream/Enum.h"/>
+      <File Name="DataStream/ViconCGStream/CameraCalibrationInfo.h"/>
+      <File Name="DataStream/ViconCGStream/KeepAlive.h"/>
+      <File Name="DataStream/ViconCGStream/CameraWand2dDetail.h"/>
+      <File Name="DataStream/ViconCGStream/UnlabeledRecons.h"/>
+      <File Name="DataStream/ViconCGStream/MomentFrame.h"/>
+      <File Name="DataStream/ViconCGStream/SubjectTopology.h"/>
+      <File Name="DataStream/ViconCGStream/ScopedWriter.h"/>
+      <File Name="DataStream/ViconCGStream/CentreOfPressureFrame.h"/>
+      <File Name="DataStream/ViconCGStream/GlobalSegmentsDetail.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ViconCGStreamClient">
+      <File Name="DataStream/ViconCGStreamClient/CMakeLists.txt"/>
+      <File Name="DataStream/ViconCGStreamClient/CGStreamReaderWriter.cpp"/>
+      <File Name="DataStream/ViconCGStreamClient/ViconCGStreamBayer.cpp"/>
+      <File Name="DataStream/ViconCGStreamClient/ViconCGStreamClient.h"/>
+      <File Name="DataStream/ViconCGStreamClient/IViconCGStreamClientCallback.h"/>
+      <File Name="DataStream/ViconCGStreamClient/ViconCGStreamClient.cpp"/>
+      <File Name="DataStream/ViconCGStreamClient/ViconCGStreamBayer.h"/>
+      <File Name="DataStream/ViconCGStreamClient/CGStreamPostalService.h"/>
+      <File Name="DataStream/ViconCGStreamClient/CGStreamReaderWriter.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ViconDataStreamSDKCoreUtils">
+      <File Name="DataStream/ViconDataStreamSDKCoreUtils/CMakeLists.txt"/>
+      <File Name="DataStream/ViconDataStreamSDKCoreUtils/AxisMapping.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCoreUtils/ClientUtils.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCoreUtils/ViconDataStreamSDKCoreUtilsVersion.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCoreUtils/Constants.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCoreUtils/AxisMapping.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCoreUtils/ClientUtils.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ViconCGStreamClientSDK">
+      <File Name="DataStream/ViconCGStreamClientSDK/CMakeLists.txt"/>
+      <File Name="DataStream/ViconCGStreamClientSDK/CGClient.cpp"/>
+      <File Name="DataStream/ViconCGStreamClientSDK/CGClient.h"/>
+      <File Name="DataStream/ViconCGStreamClientSDK/ICGFrameState.h"/>
+      <File Name="DataStream/ViconCGStreamClientSDK/ICGClient.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ViconDataStreamSDKCore">
+      <File Name="DataStream/ViconDataStreamSDKCore/CMakeLists.txt"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/CoreClientTimingLog.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/RetimerUtils.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/WirelessConfiguration.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/CoreClientTimingLog.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/RetimingCore.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/CoreClient.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/RetimerUtils.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/RetimingClient.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/WirelessConfiguration.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/SegmentPoseReader.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/CoreClient.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/RetimingClient.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/RetimingCore.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/ViconDataStreamSDKCoreVersion.h"/>
+      <File Name="DataStream/ViconDataStreamSDKCore/SegmentPoseReader.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ViconDataStreamSDK_CPPTest">
+      <File Name="DataStream/ViconDataStreamSDK_CPPTest/CMakeLists.txt"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPPTest/ViconDataStreamSDK_CPPTest.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ViconDataStreamSDK_CPP">
+      <File Name="DataStream/ViconDataStreamSDK_CPP/PkgConfig.in"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/CMakeLists.txt"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/CoreAdapters.h"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/StringFactory.h"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/DataStreamClient.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/IDataStreamClientBase.h"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/DataStreamRetimingClient.cpp"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/ViconDataStreamSDK_CPPVersion.h"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/resource.h"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/DataStreamRetimingClient.h"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPP/DataStreamClient.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="ViconDataStreamSDK_CPPRetimerTest">
+      <File Name="DataStream/ViconDataStreamSDK_CPPRetimerTest/CMakeLists.txt"/>
+      <File Name="DataStream/ViconDataStreamSDK_CPPRetimerTest/ViconDataStreamSDK_CPPRetimerTest.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="StreamCommon">
+    <File Name="StreamCommon/CMakeLists.txt"/>
+    <File Name="StreamCommon/BufferDetail.h"/>
+    <File Name="StreamCommon/Buffer.h"/>
+    <File Name="StreamCommon/Type.h"/>
+    <File Name="StreamCommon/CGStreamAsyncReaderWriter.h"/>
+    <File Name="StreamCommon/CGStreamAsyncReaderWriter.cpp"/>
+    <File Name="StreamCommon/BufferImpl.h"/>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <Settings Type="Dynamic Library">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Dynamic Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" C_Options="-g" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Debug" Command="$(WorkspacePath)/cmake-build-$(WorkspaceConfiguration)/output/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="CMake">-DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=~/Source/ViconDataStreamSDK/install</BuildSystem>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Dynamic Library" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="-O2" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="./Release" Command="$(WorkspacePath)/cmake-build-$(WorkspaceConfiguration)/output/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="CMake"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName/>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

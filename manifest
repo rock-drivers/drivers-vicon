@@ -1,0 +1,26 @@
+<package>
+  <description brief="SDK for the Vicon Tracking System." />
+
+  <author>Vicon Motion Systems Ltd</author>
+  <maintainer email="sebastian.kasperski@dfki.de">Sebastian Kasperski</maintainer>
+  <license>MIT</license>
+
+  <depend package="boost" />
+  
+  <keywords>
+    <keyword>Driver</keyword>
+  </keywords>
+ 
+  <stage>1</stage>
+  <use>multi project</use>
+  <activity>active</activity>
+
+  <classifiers>
+    <classifier>c++</classifier>
+    <classifier>library</classifier>
+    <classifier>driver</classifier>
+  </classifiers>
+
+  <tags>stable</tags>
+</package>
+
