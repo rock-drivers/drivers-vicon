@@ -27,7 +27,10 @@ set_target_properties(ViconDataStreamSDK_CPP PROPERTIES
 )
 
 install(TARGETS ViconDataStreamSDK_CPP
-	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ViconDataStreamSDK_CPP)
+	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ViconDataStreamSDK_CPP
+	LIBRARY       DESTINATION ${CMAKE_INSTALL_LIBDIR}
+	ARCHIVE       DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
 
 # Install pkg-config file
 configure_file(PkgConfig.in ViconDataStreamSDK_CPP.pc @ONLY)
